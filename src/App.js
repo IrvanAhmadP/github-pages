@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Container, Navbar, Nav, Jumbotron } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/app.css';
 
 function App() {
   return (
@@ -22,9 +23,9 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container>
+      <Jumbotron className="content-full-1">
 
-      </Container>
+      </Jumbotron>
     </div>
   );
 }
