@@ -6,12 +6,11 @@
 .navbar-nav .nav-link{
   padding: 16px 0px;
 }
-.content-full{
+.content-full, .content-full-cover{
   margin: 0px;
   border-radius: 0;
-  height: calc(100vh - 56px);
 }
-.content-home{
+.content-full-cover{
   height: 100vh;
   background: url(http://localhost:3000/img/bg-content-full-1.jpg);
   background-repeat: no-repeat;
@@ -22,7 +21,25 @@
   text-shadow: 3px 3px 3px rgba(0,0,0,.4);
   text-align: center;
 }
-.content-home h1{
+.content-full-cover h1{
   font-size: 45px;
   font-weight: 400;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .content-full{
+    height: calc(100vh - 40px);
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .content-full{
+    height: calc(100vh - 56px);
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }
