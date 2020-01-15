@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container, Navbar, Nav, Jumbotron, Row, Col } from 'react-bootstrap';
+import { Container, Navbar, Nav, Jumbotron, Row, Col, Image } from 'react-bootstrap';
 
 /* style */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/app.css';
 
 /* images */
-// import Avatar from './img/avatar.jpg';
+let Avatar = './img/avatar.jpg';
 
 function App() {
   return (
@@ -33,17 +33,19 @@ function App() {
       <Container fluid style={{padding : '0px 0px' }}>
         <Jumbotron id="home" className="d-flex flex-column align-items-center justify-content-center content-full-cover">
           <h1>IAP</h1>
-          <h4><p>professional bio</p></h4>
+          <h4><p>Professional Bio</p></h4>
         </Jumbotron>
         <Jumbotron id="about" className="d-flex flex-column align-items-center justify-content-center content-full bg-white">
           <Row>
-            <p className="display-4">IAP</p>
+            <h2>IAP</h2>
           </Row>
           <Row>
-            {/* <img src={Avatar}/> */}
+            <Image className="photo-profile" src={Avatar} roundedCircle/>
           </Row>
           <Row>
-            <p>Web Developer</p>
+            <h4 className="text-secondary">
+              Web Developer
+            </h4>
           </Row>
         </Jumbotron>
       </Container>
