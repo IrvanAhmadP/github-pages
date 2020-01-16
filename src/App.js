@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Container, Navbar, Nav, Jumbotron, Row, Col, Image, Card, Button
+  Container, Navbar, Nav, Jumbotron, Row, Col, Image
 } from 'react-bootstrap';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
