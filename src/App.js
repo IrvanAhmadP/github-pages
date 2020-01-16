@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Container, Navbar, Nav, Jumbotron, Row, Col, Image
+  Container, Navbar, Nav, Jumbotron, Row, Image
 } from 'react-bootstrap';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -26,9 +26,6 @@ function App() {
               <Nav.Item>
                 <Nav.Link href="#about">About</Nav.Link>
               </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="#contact">Contact</Nav.Link>
-              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -50,19 +47,13 @@ function App() {
               Web Developer
             </h4>
           </Row>
-        </Jumbotron>
-        <Jumbotron id="contact" className="d-flex flex-column align-items-center justify-content-center content-full bg-dark">
           <Row>
-            <Col>
-              <a className="btn btn-light btn-lg" href="https://www.linkedin.com/in/irvan-ahmad-prasetya-6306a8115/" role="button">
-                <FaLinkedin/>
-              </a>
-            </Col>
-            <Col>
-              <a className="btn btn-light btn-lg" href="https://github.com/IrvanAhmadPrasetya" role="button">
-                <FaGithub/>
-              </a>
-            </Col>
+            <a className="btn btn-light btn-lg" href="https://www.linkedin.com/in/irvan-ahmad-prasetya-6306a8115/" role="button">
+              <FaLinkedin/>
+            </a>
+            <a className="btn btn-light btn-lg" href="https://github.com/IrvanAhmadPrasetya" role="button">
+              <FaGithub/>
+            </a>
           </Row>
         </Jumbotron>
       </Container>
