@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Navbar expand="lg" className="custom-navbar" fixed="top">
         <Container>
-          <Navbar.Brand href='#'>Irvan Ahmad P</Navbar.Brand>
+          <Navbar.Brand href='#'>Irvan Ahmad P.</Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar-nav'/>
           <Navbar.Collapse id='navbar-nav'>
             <Nav className="justify-content-end" style={{ width: "100%" }}>
@@ -35,12 +35,12 @@ function App() {
       </Navbar>
       <Container fluid style={{padding : '0px 0px' }}>
         <Jumbotron id="home" className="d-flex flex-column align-items-center justify-content-center content-full-cover">
-          <h1>Irvan Ahmad P</h1>
+          <h1>Irvan Ahmad P.</h1>
           <h4><p>Professional Bio</p></h4>
         </Jumbotron>
         <Jumbotron id="about" className="d-flex flex-column align-items-center justify-content-center content-full bg-light">
           <Row>
-            <h2>Irvan Ahmad P</h2>
+            <h2>Irvan Ahmad P.</h2>
           </Row>
           <Row>
             <Image className="photo-profile" src={Avatar} roundedCircle/>
