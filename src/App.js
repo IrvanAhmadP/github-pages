@@ -4,6 +4,9 @@ import {
 } from 'react-bootstrap';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
+/* data */
+import portofolioData from './assets/data/portofolioData'
+
 /* style */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/app.css';
@@ -44,48 +47,27 @@ function App() {
           </Row>
           <Container style={{marginTop : '25px'}}>
             <Row>
-              <Col>
-                <Card className="card-wrap">
-                  <div className="image-protofolio-wrap">
-                    <Image variant="top" rounded className="img-portofolio" src="https://raw.githubusercontent.com/IrvanAhmadPrasetya/RBuilder/master/images/Screenshot%20-%20RBuilder.png" />
-                  </div>
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk of
-                      the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col>
-                <Card className="card-wrap">
-                  <div className="image-protofolio-wrap">
-                    <Image variant="top" rounded className="img-portofolio" src="https://raw.githubusercontent.com/IrvanAhmadPrasetya/RBuilder/master/images/Screenshot%20-%20RBuilder.png" />
-                  </div>
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk of
-                      the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col>
-                <Card className="card-wrap">
-                  <div className="image-protofolio-wrap">
-                    <Image variant="top" rounded className="img-portofolio" src="https://raw.githubusercontent.com/IrvanAhmadPrasetya/RBuilder/master/images/Screenshot%20-%20RBuilder.png" />
-                  </div>
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk of
-                      the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
+              {
+                portofolioData.map((portofolioDataRow, i) =>
+                  <Col>
+                    <Card className="card-wrap">
+                      <div className="image-protofolio-wrap">
+                        <Image variant="top" rounded className="img-portofolio" src={ portofolioDataRow.imageUrl } />
+                      </div>
+                      <Card.Body>
+                        <Card.Title>
+                          <a href={portofolioDataRow.url} title={portofolioDataRow.title}>
+                            { portofolioDataRow.title }
+                          </a>
+                        </Card.Title>
+                        <Card.Text>
+                          { portofolioDataRow.content }
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                )
+              }
             </Row>
           </Container>
         </Jumbotron>
