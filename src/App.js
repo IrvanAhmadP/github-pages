@@ -49,7 +49,7 @@ function App() {
             <Row>
               {
                 portofolioData.map((portofolioDataRow, i) =>
-                  <Col>
+                  <Col className="col-portofolio-wrap">
                     <Card className="card-wrap">
                       <div className="image-protofolio-wrap">
                         <Image variant="top" rounded className="img-portofolio" src={ portofolioDataRow.imageUrl } />
