@@ -1,5 +1,5 @@
 :root {
-  --url-home-page-cover: url("https://irvanahmadp.github.io/img/bg-content-full-1.jpg")
+  --url-home-page-cover: url("https://irvanahmadp.github.io/img/bg-content-full-1.webp")
 }
 body{
   background: #f8f9fa;
@@ -51,6 +51,7 @@ body{
 }
 .photo-profile{
   max-width: 225px;
+  max-height: 225px;
   margin: 25px;
 }
 

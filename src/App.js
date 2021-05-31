@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Container, Navbar, Nav, Jumbotron, Row, Col, Image, Card
 } from 'react-bootstrap';
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaMedium } from "react-icons/fa";
 
 /* data */
 import portofolioData from './assets/data/portofolioData'
@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/app.css';
 
 /* images */
-let Avatar = './img/avatar.jpg';
+let Avatar = '/img/avatar.webp';
 
 function App() {
   return (
@@ -32,6 +32,9 @@ function App() {
               <Nav.Item>
                 <Nav.Link href="#about">About</Nav.Link>
               </Nav.Item>
+              <Nav.Item>
+                  <Nav.Link href="/">V2</Nav.Link>
+                </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -39,7 +42,7 @@ function App() {
       <Container fluid style={{padding : '0px 0px' }}>
         <Jumbotron id="home" className="d-flex flex-column align-items-center justify-content-center content-full-cover">
           <h1>Irvan Ahmad P.</h1>
-          <h4><p>Professional Bio</p></h4>
+          <p class="h3">Professional Bio</p>
         </Jumbotron>
         <Jumbotron id="portofolio" className="d-flex flex-column align-items-center justify-content-center content-full bg-white">
           <Row>
@@ -49,14 +52,14 @@ function App() {
             <Row>
               {
                 portofolioData.map((portofolioDataRow, i) =>
-                  <Col className="col-portofolio-wrap">
+                  <Col className="col-portofolio-wrap" key={ i }>
                     <Card className="card-wrap">
                       <div className="image-protofolio-wrap">
-                        <Image variant="top" rounded className="img-portofolio" src={ portofolioDataRow.imageUrl } />
+                        <Image variant="top" rounded className="img-portofolio" src={ portofolioDataRow.imageUrl } alt={ portofolioDataRow.title }/>
                       </div>
                       <Card.Body>
                         <Card.Title>
-                          <a href={portofolioDataRow.url} title={portofolioDataRow.title}>
+                          <a className="text-dark" href={portofolioDataRow.url} title={portofolioDataRow.title}>
                             { portofolioDataRow.title }
                           </a>
                         </Card.Title>
@@ -71,25 +74,28 @@ function App() {
             </Row>
           </Container>
         </Jumbotron>
-        <Jumbotron id="about" className="d-flex flex-column align-items-center justify-content-center content-full bg-light">
+        <Jumbotron id="about" className="d-flex flex-column align-items-center justify-content-center content-full bg-light mb-0">
           <Row>
             <h2>Irvan Ahmad P.</h2>
           </Row>
           <Row>
-            <Image className="photo-profile" src={Avatar} roundedCircle/>
+            <Image roundedCircle className="photo-profile" src={Avatar} alt="Avatar Irvan Ahmad P."/>
           </Row>
           <Row>
-            <h4 className="text-secondary">
+            <p className="h4 text-secondary">
               Web Developer
-            </h4>
+            </p>
           </Row>
           <Row>
-            <a className="btn btn-light btn-lg" href="https://www.linkedin.com/in/irvan-ahmad-prasetya-6306a8115/" role="button">
+            <a className="btn btn-light btn-lg"  title="Linkedin"  href="https://www.linkedin.com/in/irvan-ahmad-prasetya-6306a8115/">
               <FaLinkedin/>
             </a>
-            <a className="btn btn-light btn-lg" href="https://github.com/IrvanAhmadPrasetya" role="button">
+            <a className="btn btn-light btn-lg"  title="Github"  href="https://github.com/IrvanAhmadPrasetya">
               <FaGithub/>
             </a>
+            <a className="btn btn-light btn-lg"  title="Medium"  href="https://medium.com/@IrvanAhmadP">
+                <FaMedium/>
+              </a>
           </Row>
         </Jumbotron>
       </Container>
